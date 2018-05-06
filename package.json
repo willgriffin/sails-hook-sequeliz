@@ -1,22 +1,20 @@
 {
   "_args": [
     [
-      "sails-hook-sequelize@1.1.1",
-      "C:\\Users\\Raymond\\SEER"
+      "sails-hook-sequeliz@1.1.1",
     ]
   ],
-  "_from": "sails-hook-sequelize@1.1.1",
-  "_id": "sails-hook-sequelize@1.1.1",
+  "_from": "sails-hook-sequeliz@1.1.1",
+  "_id": "sails-hook-sequeliz@1.1.1",
   "_inBundle": false,
-  "_integrity": "sha512-5kXTuR24rBQ2pYxefCOFL+TmPnceCch9eweV2E5FgWpEDuAcnMIWsgN/hv70/yyN5YIrKKw2I6BjFtKSXG0FWw==",
   "_location": "/sails-hook-sequelize",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "sails-hook-sequelize@1.1.1",
-    "name": "sails-hook-sequelize",
-    "escapedName": "sails-hook-sequelize",
+    "raw": "sails-hook-sequeliz@1.1.1",
+    "name": "sails-hook-sequeliz",
+    "escapedName": "sails-hook-sequeliz",
     "rawSpec": "1.1.1",
     "saveSpec": null,
     "fetchSpec": "1.1.1"
@@ -24,39 +22,34 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/sails-hook-sequelize/-/sails-hook-sequelize-1.1.1.tgz",
-  "_spec": "1.1.1",
-  "_where": "C:\\Users\\Raymond\\SEER",
+  
   "author": {
-    "name": "Gergely Munkacsy"
+    "name": "Raymond FEST"
   },
   "bugs": {
-    "url": "https://github.com/KSDaemon/sails-hook-sequelize/issues"
+    "url": "https://github.com/aristot/sails-hook-sequeliz.git/issues"
   },
   "dependencies": {
     "continuation-local-storage": "^3.1.4",
     "sequelize": "^4.2.1"
   },
-  "description": "Sails.js hook to use sequelize ORM",
+  "description": "Sails.js V1 hook to use sequelize ORM V4",
   "devDependencies": {
-    "coveralls": "^3.0.0",
-    "decache": "^4.1.0",
-    "eslint": "^4.7.2",
-    "istanbul": "^0.4.5",
-    "json3": "^3.3.2",
-    "minimatch": "^3.0.4",
-    "mocha": "^3.5.3",
-    "pg": "^6.4.0",
+   "devDependencies": {
+    "mocha": "^2.2.5",
+    "pg": "^4.4.0",
     "pg-hstore": "^2.3.2",
-    "sails": "^0.12.14",
-    "should": "^13.1.0",
-    "sqlite3": "^3.1.13",
-    "supertest": "^3.0.0"
+    "root-require": "^0.3.1",
+    "sails-disk": "^0.10.8",
+    "should": "^7.0.2",
+    "supertest": "^1.0.1",
+    "sails": "^1.0.1",
+    "sequelize": "^4.20.0"
   },
   "directories": {
     "test": "test"
   },
-  "homepage": "https://github.com/KSDaemon/sails-hook-sequelize",
+  "homepage": "https://github.com/aristot/sails-hook-sequeliz",
   "keywords": [
     "sails",
     "sequelize",
@@ -66,8 +59,8 @@
   "main": "index.js",
   "name": "sails-hook-sequelize",
   "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/KSDaemon/sails-hook-sequelize.git"
+     "type": "git",
+    "url": "https://github.com/aristot/sails-hook-sequeliz.git"
   },
   "sails": {
     "isHook": true
@@ -80,5 +73,14 @@
     "pretest": "cd ./test/fixtures/v0.11-app && npm i --prefix ./ && cd - && cd ./test/fixtures/v1.0-app && npm i --prefix ./ && cd -",
     "test": "node ./node_modules/.bin/mocha test/overall.test.js"
   },
-  "version": "1.1.1"
+  "version": "1.1.1",
+   
+  "maintainers": [
+    {
+      "name": "aristot",
+      "email": "raymond.fest@gmail.com"
+    }
+  ]
+  
+}
 }
