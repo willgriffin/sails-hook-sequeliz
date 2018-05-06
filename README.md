@@ -101,7 +101,6 @@ Now is maintained by Konstantin Burkalev (@KSDaemon).
 # License
 [MIT](./LICENSE)
 [github-url]: https://github.com/aristot/sails-hook-sequeliz.git
-[npm-url]: https://www.npmjs.com/package/sails-hook-sequelize
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: http://opensource.org/licenses/MIT
