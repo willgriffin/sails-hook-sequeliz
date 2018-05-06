@@ -1,12 +1,6 @@
 # sails-hook-sequeliz
 Sails.js V1 hook to use sequelize ORM V4
 
-[![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Code coverage][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-image]][depstat-url]
-[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
-[![MIT License][license-image]][license-url]
 
 
 # Installation
