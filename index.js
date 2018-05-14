@@ -51,7 +51,7 @@ module.exports = sails => {
         },
 
         initialize (next) {
-            if (sails.config.hooks.orm === false) {            
+            if (sails.config.hooks.orm === false) {
                 this.initAdapters();
                 this.initModels();
                 this.reload(next);
@@ -107,7 +107,7 @@ module.exports = sails => {
             for (connectionName in datastores) {
                 connection = datastores[connectionName];
                 // Skip waterline connections
-                if (connection.adapter)continue;               
+                if (connection.adapter)continue;
                 // R. Fest Patch 0.12 compatibility we assume db connection contain dialect property
                 // otherwise ( i.e; : local: { adapter: 'sails-disk' }) we pass through
                 if (!connection.dialect)continue;
@@ -127,6 +127,7 @@ module.exports = sails => {
                         connection.options);
                 }
             }
+            global['sequelize'] = connections[datastoreName];
 
             return connections;
         },
@@ -151,7 +152,7 @@ module.exports = sails => {
             for (modelName in models) {
                 modelDef = models[modelName];
                // Skip models without options provided (possible Waterline models)
-               // if (!modelDef.options)continue;               
+               // if (!modelDef.options)continue;
                 sails.log.verbose('Loading model \'' + modelDef.globalId + '\'');
                 // R. Fest Patch 0.12 compatibility we assume one unique connection implicate no need to define an option
                 connectionName = modelDef.connection || modelDef.datastore || defaultConnection;
@@ -159,7 +160,7 @@ module.exports = sails => {
                 modelClass = connections[connectionName].define(modelDef.globalId, modelDef.attributes, modelDef.options);
 
                 if (sequelizeMajVersion >= 4) {
-                    // R. Fest Bug  if no options in the model 
+                    // R. Fest Bug  if no options in the model
                     if (modelDef.options){
                         for (cm in modelDef.options.classMethods) {
                             modelClass[cm] = modelDef.options.classMethods[cm];
@@ -182,7 +183,7 @@ module.exports = sails => {
             for (modelName in models) {
                 modelDef = models[modelName];
                // Skip models without options provided (possible Waterline models)
-                if (!modelDef.options)continue;              
+                if (!modelDef.options)continue;
                 this.setAssociation(modelDef);
                 this.setDefaultScope(modelDef, sails.models[modelDef.globalId.toLowerCase()]);
             }
